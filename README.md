@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Seon — Next.js Landing Page Portfolio
 
-## Getting Started
+Portfolio / sales landing page matching the Fiverr gig:
 
-First, run the development server:
+**I will build a Next.js landing page and deploy it in 48 hours**
+
+## Stack
+
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS v4
+- Deploy-ready for Vercel
+
+## Customize
+
+Edit `lib/site.ts`:
+
+- `name`, `email`
+- `fiverrUrl` — your real Fiverr gig link
+- `whatsapp` — e.g. `6281234567890` (optional; otherwise email is used)
+- packages, works, FAQs
+
+## Run locally
 
 ```bash
+cd portfolio-landing
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy to Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm i -g vercel
+cd portfolio-landing
+vercel
+```
 
-## Learn More
+Or push to GitHub and import the repo in the Vercel dashboard.
 
-To learn more about Next.js, take a look at the following resources:
+## Fiverr tip
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+After deploy, use the live URL + screenshots in your Gig Gallery.
