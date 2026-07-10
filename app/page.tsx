@@ -12,9 +12,9 @@ export default function Home() {
       {/* Nav */}
       <header className="sticky top-0 z-50 border-b border-border bg-[var(--nav-bg)] backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-          <a href="#top" className="flex items-center gap-2 font-semibold tracking-tight group">
-            <Logo className="w-8 h-8 transition-transform group-hover:scale-105" />
-            <span className="text-heading">
+          <a href="#top" className="flex items-center gap-3 font-semibold tracking-tight group">
+            <Logo className="h-9 w-9 transition-transform group-hover:scale-105" />
+            <span className="text-lg text-heading">
               {site.name}
             </span>
           </a>
@@ -44,55 +44,74 @@ export default function Home() {
       <main id="top" className="flex-1 scroll-mt-20">
         {/* Hero */}
         <section className="relative px-4 pb-20 pt-16 sm:px-6 sm:pb-28 sm:pt-24">
-          <div className="pointer-events-none absolute inset-0 -z-10">
-            <div className="absolute left-1/2 top-0 h-[420px] w-[min(100%,720px)] -translate-x-1/2 rounded-full bg-[var(--hero-glow)] blur-3xl" />
+          <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+            <div className="absolute left-1/2 top-0 h-[480px] w-[min(100%,800px)] -translate-x-1/2 rounded-full bg-[var(--hero-glow)] blur-3xl opacity-80" />
+            <div className="absolute left-1/2 top-20 h-[300px] w-[min(100%,600px)] -translate-x-1/2 rounded-full bg-[var(--hero-glow-2)] blur-3xl opacity-60 mix-blend-screen" />
           </div>
 
           <div className="mx-auto max-w-6xl">
-            <FadeIn className="mx-auto max-w-3xl text-center">
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--badge-border)] bg-[var(--badge-bg)] px-3 py-1 text-xs font-medium text-[var(--badge-text)] sm:text-sm">
-                <span className="h-1.5 w-1.5 shrink-0 animate-pulse rounded-full bg-accent" />
-                Next.js · Tailwind · Vercel · English
+            <FadeIn className="mx-auto max-w-4xl text-center">
+              <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[var(--badge-border)] bg-[var(--badge-bg)] px-3.5 py-1.5 text-xs font-medium text-[var(--badge-text)] sm:text-sm">
+                <span className="h-2 w-2 shrink-0 animate-pulse rounded-full bg-accent" />
+                Next.js · Tailwind · Vercel
               </div>
 
-              <h1 className="text-4xl font-semibold tracking-tight text-heading sm:text-5xl md:text-6xl">
+              <h1 className="text-4xl font-bold tracking-tight text-heading sm:text-6xl md:text-7xl">
                 I build a{" "}
                 <span className="gradient-text">Next.js landing page</span>
                 <br className="hidden sm:block" /> and deploy it in{" "}
                 <span className="gradient-text">48 hours</span>
               </h1>
 
-              <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-text-secondary sm:text-lg">
+              <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-text-secondary sm:text-xl">
                 Clean, mobile-responsive landing pages for startups, creators, and local
                 businesses. Live Vercel URL, production-ready code, and clear communication.
               </p>
 
-              <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
                   href="#packages"
-                  className="inline-flex w-full items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-[var(--btn-accent-text)] transition duration-300 hover:scale-105 hover:opacity-90 active:scale-95 sm:w-auto"
+                  className="inline-flex w-full items-center justify-center rounded-full bg-accent px-8 py-4 text-base font-semibold text-[var(--btn-accent-text)] transition duration-300 hover:scale-105 hover:opacity-90 hover:shadow-xl hover:shadow-accent/20 active:scale-95 sm:w-auto"
                 >
-                  View packages from $80
+                  Start Your Project
                 </a>
                 <a
                   href="#work"
-                  className="inline-flex w-full items-center justify-center rounded-full border border-border bg-[var(--btn-ghost-bg)] px-6 py-3 text-sm font-medium text-[var(--btn-ghost-text)] transition duration-300 hover:scale-105 hover:border-accent/40 hover:bg-[var(--btn-ghost-hover)] active:scale-95 sm:w-auto"
+                  className="inline-flex w-full items-center justify-center rounded-full border border-border bg-[var(--btn-ghost-bg)] px-8 py-4 text-base font-medium text-[var(--btn-ghost-text)] transition duration-300 hover:scale-105 hover:border-accent/40 hover:bg-[var(--btn-ghost-hover)] active:scale-95 sm:w-auto"
                 >
                   See example work
                 </a>
               </div>
 
-              <div className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-text-tertiary sm:text-sm">
-                <span className="flex items-center gap-1.5"><Check size={14} className="text-accent" /> Functional website</span>
-                <span className="flex items-center gap-1.5"><Check size={14} className="text-accent" /> Source code included</span>
-                <span className="flex items-center gap-1.5"><Check size={14} className="text-accent" /> Hosting setup (Vercel)</span>
-                <span className="flex items-center gap-1.5"><Globe size={14} className="text-accent" /> {site.location}</span>
+              <div className="mt-14 flex flex-col items-center justify-center gap-6 border-t border-border/40 pt-10 sm:flex-row sm:gap-12">
+                <div className="flex items-center gap-3 text-left">
+                  <div className="flex -space-x-3">
+                    {[1, 2, 3, 4, 5].map((i) => (
+                      <div key={i} className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-background bg-accent/20 text-sm font-bold text-accent shadow-sm">
+                        {String.fromCharCode(64 + i)}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-sm font-semibold text-heading">Trusted by 50+</span>
+                    <span className="text-xs text-text-tertiary">Startups & Creators</span>
+                  </div>
+                </div>
+                <div className="hidden h-12 w-px bg-border/50 sm:block"></div>
+                <div className="flex flex-col items-center sm:items-start text-left">
+                  <div className="flex gap-0.5 text-accent">
+                    {[1, 2, 3, 4, 5].map((i) => (
+                      <svg key={i} viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5"><path fillRule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clipRule="evenodd" /></svg>
+                    ))}
+                  </div>
+                  <span className="mt-1 text-sm font-medium text-text-secondary"><span className="font-bold text-heading">5.0/5</span> Average Rating</span>
+                </div>
               </div>
             </FadeIn>
 
             {/* Browser mockup */}
-            <FadeIn delay={0.2} className="mx-auto mt-14 max-w-4xl">
-              <div className="glass glow-ring overflow-hidden rounded-2xl shadow-2xl transition duration-500 hover:shadow-accent/20">
+            <FadeIn delay={0.2} className="mx-auto mt-20 max-w-5xl">
+              <div className="glass glow-ring overflow-hidden rounded-2xl shadow-2xl transition duration-700 hover:shadow-accent/20">
                 <div className="flex items-center gap-2 border-b border-border bg-[var(--mockup-bar)] px-4 py-3">
                   <span className="h-2.5 w-2.5 rounded-full bg-[var(--dot-red)]" />
                   <span className="h-2.5 w-2.5 rounded-full bg-[var(--dot-yellow)]" />
@@ -122,27 +141,27 @@ export default function Home() {
                       Documentation
                     </button>
                   </div>
-                  <div className="grid gap-4 pt-4 sm:grid-cols-3">
-                    <div className="group rounded-xl border border-border bg-[var(--btn-ghost-bg)] p-4 transition hover:border-accent/30 hover:bg-[var(--surface-elevated)]">
-                      <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-accent/10 text-accent transition-transform group-hover:scale-110">
-                        <Zap size={16} />
+                  <div className="grid gap-6 pt-8 sm:grid-cols-3">
+                    <div className="group rounded-2xl border border-border bg-[var(--btn-ghost-bg)] p-6 transition duration-300 hover:border-accent/30 hover:bg-[var(--surface-elevated)] hover:shadow-lg hover:shadow-accent/5">
+                      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-transform duration-300 group-hover:scale-110">
+                        <Zap size={24} />
                       </div>
-                      <div className="mb-1 text-sm font-semibold text-heading">Lightning Fast</div>
-                      <div className="text-xs text-text-tertiary">Optimized for speed and SEO.</div>
+                      <div className="mb-2 text-base font-semibold text-heading">Lightning Fast</div>
+                      <div className="text-sm leading-relaxed text-text-tertiary">Optimized for speed, SEO, and flawless Core Web Vitals.</div>
                     </div>
-                    <div className="group rounded-xl border border-border bg-[var(--btn-ghost-bg)] p-4 transition hover:border-accent/30 hover:bg-[var(--surface-elevated)]">
-                      <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-accent/10 text-accent transition-transform group-hover:scale-110">
-                        <Palette size={16} />
+                    <div className="group rounded-2xl border border-border bg-[var(--btn-ghost-bg)] p-6 transition duration-300 hover:border-accent/30 hover:bg-[var(--surface-elevated)] hover:shadow-lg hover:shadow-accent/5">
+                      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-transform duration-300 group-hover:scale-110">
+                        <Palette size={24} />
                       </div>
-                      <div className="mb-1 text-sm font-semibold text-heading">Customizable</div>
-                      <div className="text-xs text-text-tertiary">Tailwind CSS utility classes.</div>
+                      <div className="mb-2 text-base font-semibold text-heading">Customizable</div>
+                      <div className="text-sm leading-relaxed text-text-tertiary">Built with Tailwind CSS for rapid scaling and iteration.</div>
                     </div>
-                    <div className="group rounded-xl border border-border bg-[var(--btn-ghost-bg)] p-4 transition hover:border-accent/30 hover:bg-[var(--surface-elevated)]">
-                      <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-accent/10 text-accent transition-transform group-hover:scale-110">
-                        <Smartphone size={16} />
+                    <div className="group rounded-2xl border border-border bg-[var(--btn-ghost-bg)] p-6 transition duration-300 hover:border-accent/30 hover:bg-[var(--surface-elevated)] hover:shadow-lg hover:shadow-accent/5">
+                      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-transform duration-300 group-hover:scale-110">
+                        <Smartphone size={24} />
                       </div>
-                      <div className="mb-1 text-sm font-semibold text-heading">Responsive</div>
-                      <div className="text-xs text-text-tertiary">Looks great on all devices.</div>
+                      <div className="mb-2 text-base font-semibold text-heading">Responsive</div>
+                      <div className="text-sm leading-relaxed text-text-tertiary">Pixel-perfect design on mobile, tablet, and desktop screens.</div>
                     </div>
                   </div>
                 </div>

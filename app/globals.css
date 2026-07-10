@@ -36,8 +36,9 @@ html.dark {
   --mockup-body-to: #0c0e18;
   --mockup-url-bg: #1a1e33;
   --selection-bg: rgba(139, 156, 247, 0.25);
-  --hero-glow: rgba(139, 156, 247, 0.06);
-  --grid-line: rgba(139, 156, 247, 0.025);
+  --hero-glow: rgba(139, 156, 247, 0.08);
+  --hero-glow-2: rgba(182, 148, 246, 0.06);
+  --grid-line: rgba(139, 156, 247, 0.015);
   --grid-radial-1: rgba(139, 156, 247, 0.08);
   --grid-radial-2: rgba(182, 148, 246, 0.05);
   --cta-glow: rgba(139, 156, 247, 0.1);
@@ -82,8 +83,9 @@ html.light {
   --mockup-body-to: #e2e6f2;
   --mockup-url-bg: #e2e6f2;
   --selection-bg: rgba(102, 114, 219, 0.15);
-  --hero-glow: rgba(102, 114, 219, 0.05);
-  --grid-line: rgba(28, 32, 53, 0.025);
+  --hero-glow: rgba(102, 114, 219, 0.06);
+  --hero-glow-2: rgba(139, 121, 212, 0.04);
+  --grid-line: rgba(28, 32, 53, 0.015);
   --grid-radial-1: rgba(102, 114, 219, 0.05);
   --grid-radial-2: rgba(139, 121, 212, 0.035);
   --cta-glow: rgba(102, 114, 219, 0.06);
@@ -107,7 +109,7 @@ html.light {
   --color-text-tertiary: var(--text-tertiary);
   --color-text-quaternary: var(--text-quaternary);
   --color-surface: var(--surface);
-  --font-sans: var(--font-nunito);
+  --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -122,7 +124,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-nunito), system-ui, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
   min-height: 100%;
   transition: background-color 0.35s ease, color 0.35s ease;
 }
