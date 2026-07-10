@@ -83,30 +83,7 @@ export default function Home() {
                 </a>
               </div>
 
-              <div className="mt-14 flex flex-col items-center justify-center gap-6 border-t border-border/40 pt-10 sm:flex-row sm:gap-12">
-                <div className="flex items-center gap-3 text-left">
-                  <div className="flex -space-x-3">
-                    {[1, 2, 3, 4, 5].map((i) => (
-                      <div key={i} className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-background bg-accent/20 text-sm font-bold text-accent shadow-sm">
-                        {String.fromCharCode(64 + i)}
-                      </div>
-                    ))}
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-sm font-semibold text-heading">Trusted by 50+</span>
-                    <span className="text-xs text-text-tertiary">Startups & Creators</span>
-                  </div>
-                </div>
-                <div className="hidden h-12 w-px bg-border/50 sm:block"></div>
-                <div className="flex flex-col items-center sm:items-start text-left">
-                  <div className="flex gap-0.5 text-accent">
-                    {[1, 2, 3, 4, 5].map((i) => (
-                      <svg key={i} viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5"><path fillRule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clipRule="evenodd" /></svg>
-                    ))}
-                  </div>
-                  <span className="mt-1 text-sm font-medium text-text-secondary"><span className="font-bold text-heading">5.0/5</span> Average Rating</span>
-                </div>
-              </div>
+
             </FadeIn>
 
             {/* Browser mockup */}
@@ -361,7 +338,7 @@ export default function Home() {
                        {pkg.delivery}
                     </span>
                     <span className="flex items-center gap-1 rounded-full border border-border px-2.5 py-1">
-                       {pkg.revisions} revision{pkg.revisions > 1 ? "s" : ""}
+                       {pkg.revisions} {pkg.revisions > 1 ? "revisions" : "revision"}
                     </span>
                   </div>
                   <ul className="mt-6 flex-1 space-y-3">

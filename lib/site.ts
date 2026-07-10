@@ -1,6 +1,6 @@
 /** Edit these values for your brand / Fiverr / contact */
 export const site = {
-  name: "Your project name",
+  name: "Alfin Reswara",
   title: "Next.js Landing Pages",
   tagline: "Live in 48 Hours",
   email: "alf.inreswara@gmail.com",
@@ -25,7 +25,7 @@ export const packages = [
       "1 long-scroll landing page",
       "Mobile responsive layout",
       "Hero, features, CTA, contact",
-      "WhatsApp or email CTA",
+      "Contact form or email CTA",
       "Live Vercel deploy",
       "Source code after payment",
       "1 revision",
