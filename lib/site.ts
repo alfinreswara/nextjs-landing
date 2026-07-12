@@ -1,6 +1,6 @@
 /** Edit these values for your brand / Fiverr / contact */
 export const site = {
-  name: "Alfin Reswara",
+  name: "alfinreswara",
   title: "Next.js Landing Pages",
   tagline: "Live in 48 Hours",
   email: "alf.inreswara@gmail.com",

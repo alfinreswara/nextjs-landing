@@ -15,12 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alfin Reswara — Next.js Landing Pages in 48 Hours",
+  title: "alfinreswara — Next.js Landing Pages in 48 Hours",
   description:
     "Production-ready landing pages built with Next.js & Tailwind. Live Vercel URL + source code. Mobile responsive, SEO optimized.",
-  openGraph: {
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
-  },
   icons: {
     icon: "/favicon.svg",
   },
@@ -32,10 +29,11 @@ export const metadata: Metadata = {
     "custom website",
   ],
   openGraph: {
-    title: "Your project name — Next.js Landing Pages Live in 48 Hours",
+    title: "alfinreswara — Next.js Landing Pages in 48 Hours",
     description:
       "Modern Next.js landing pages with Vercel deploy. Fast delivery, production-ready code.",
     type: "website",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
 };
 
