@@ -5,6 +5,9 @@ import { faqs, packages, site, steps, works } from "@/lib/site";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/AnimateIn";
 import { Logo } from "@/components/Logo";
 import { Zap, Palette, Smartphone, Check, ChevronDown, Lock, Code, Globe, Layout, Layers, MessageSquare } from "lucide-react";
+import Image from "next/image";
+import { PortfolioCard } from "@/components/PortfolioCard";
+import { TrustBadges } from "@/components/TrustBadges";
 
 export default function Home() {
   return (
@@ -43,109 +46,76 @@ export default function Home() {
 
       <main id="top" className="flex-1 scroll-mt-20">
         {/* Hero */}
-        <section className="relative px-4 pb-20 pt-16 sm:px-6 sm:pb-28 sm:pt-24">
-          <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <section className="relative px-4 pb-16 pt-16 sm:px-6 sm:pb-24 sm:pt-24 lg:pt-32">
+          <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-gradient-to-br from-purple-900/10 via-transparent to-blue-900/10">
             <div className="absolute left-1/2 top-0 h-[480px] w-[min(100%,800px)] -translate-x-1/2 rounded-full bg-[var(--hero-glow)] blur-3xl opacity-80" />
             <div className="absolute left-1/2 top-20 h-[300px] w-[min(100%,600px)] -translate-x-1/2 rounded-full bg-[var(--hero-glow-2)] blur-3xl opacity-60 mix-blend-screen" />
           </div>
 
-          <div className="mx-auto max-w-6xl">
-            <FadeIn className="mx-auto max-w-4xl text-center">
-              <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[var(--badge-border)] bg-[var(--badge-bg)] px-3.5 py-1.5 text-xs font-medium text-[var(--badge-text)] sm:text-sm">
-                <span className="h-2 w-2 shrink-0 animate-pulse rounded-full bg-accent" />
-                Next.js · Tailwind · Vercel
-              </div>
-
-              <h1 className="text-4xl font-bold tracking-tight text-heading sm:text-6xl md:text-7xl">
-                I build a{" "}
-                <span className="gradient-text">Next.js landing page</span>
-                <br className="hidden sm:block" /> and deploy it in{" "}
-                <span className="gradient-text">48 hours</span>
-              </h1>
-
-              <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-text-secondary sm:text-xl">
-                Clean, mobile-responsive landing pages for startups, creators, and local
-                businesses. Live Vercel URL, production-ready code, and clear communication.
-              </p>
-
-              <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <a
-                  href="#packages"
-                  className="inline-flex w-full items-center justify-center rounded-full bg-accent px-8 py-4 text-base font-semibold text-[var(--btn-accent-text)] transition duration-300 hover:scale-105 hover:opacity-90 hover:shadow-xl hover:shadow-accent/20 active:scale-95 sm:w-auto"
-                >
-                  Start Your Project
-                </a>
-                <a
-                  href="#work"
-                  className="inline-flex w-full items-center justify-center rounded-full border border-border bg-[var(--btn-ghost-bg)] px-8 py-4 text-base font-medium text-[var(--btn-ghost-text)] transition duration-300 hover:scale-105 hover:border-accent/40 hover:bg-[var(--btn-ghost-hover)] active:scale-95 sm:w-auto"
-                >
-                  See example work
-                </a>
-              </div>
-
-
-            </FadeIn>
-
-            {/* Browser mockup */}
-            <FadeIn delay={0.2} className="mx-auto mt-20 max-w-5xl">
-              <div className="glass glow-ring overflow-hidden rounded-2xl shadow-2xl transition duration-700 hover:shadow-accent/20">
-                <div className="flex items-center gap-2 border-b border-border bg-[var(--mockup-bar)] px-4 py-3">
-                  <span className="h-2.5 w-2.5 rounded-full bg-[var(--dot-red)]" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-[var(--dot-yellow)]" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-[var(--dot-green)]" />
-                  <div className="ml-3 min-w-0 flex-1 flex items-center gap-1.5 truncate rounded-md bg-[var(--mockup-url-bg)] px-3 py-1 font-mono text-[11px] text-text-tertiary sm:text-xs">
-                    <Lock size={12} className="opacity-70" />
-                    yourproject.vercel.app
-                  </div>
+          <div className="mx-auto max-w-7xl">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <FadeIn className="text-left">
+                <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[var(--badge-border)] bg-[var(--badge-bg)] px-3.5 py-1.5 text-xs font-medium text-[var(--badge-text)] sm:text-sm">
+                  <span className="h-2 w-2 shrink-0 animate-pulse rounded-full bg-accent" />
+                  Next.js · Tailwind · Vercel
                 </div>
-                <div className="space-y-6 bg-gradient-to-b from-[var(--mockup-body-from)] to-[var(--mockup-body-to)] p-6 sm:p-10">
-                  <div className="inline-flex rounded-full border border-[var(--badge-border)] bg-[var(--badge-bg)] px-2.5 py-1 text-[11px] font-medium text-[var(--badge-text)]">
-                    ✨ Your project v2.0 is live
-                  </div>
-                  <div className="max-w-lg space-y-4">
-                    <h2 className="text-3xl font-bold leading-tight tracking-tight text-heading sm:text-4xl">
-                      Build faster with <span className="text-accent">Next.js</span> & Tailwind
-                    </h2>
-                    <p className="text-sm leading-relaxed text-text-secondary sm:text-base">
-                      Deploy production-ready landing pages in a fraction of the time with our scalable architecture and pre-built components.
-                    </p>
-                  </div>
-                  <div className="flex flex-wrap gap-3 pt-2">
-                    <button className="rounded-full bg-accent px-6 py-2.5 text-sm font-medium text-[var(--btn-accent-text)] transition hover:opacity-90 hover:scale-105 active:scale-95 duration-200">
-                      Get Started
-                    </button>
-                    <button className="rounded-full border border-border bg-[var(--btn-ghost-bg)] px-6 py-2.5 text-sm font-medium text-[var(--btn-ghost-text)] transition hover:border-accent/40 hover:scale-105 active:scale-95 duration-200">
-                      Documentation
-                    </button>
-                  </div>
-                  <div className="grid gap-6 pt-8 sm:grid-cols-3">
-                    <div className="group rounded-2xl border border-border bg-[var(--btn-ghost-bg)] p-6 transition duration-300 hover:border-accent/30 hover:bg-[var(--surface-elevated)] hover:shadow-lg hover:shadow-accent/5">
-                      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-transform duration-300 group-hover:scale-110">
-                        <Zap size={24} />
-                      </div>
-                      <div className="mb-2 text-base font-semibold text-heading">Lightning Fast</div>
-                      <div className="text-sm leading-relaxed text-text-tertiary">Optimized for speed, SEO, and flawless Core Web Vitals.</div>
-                    </div>
-                    <div className="group rounded-2xl border border-border bg-[var(--btn-ghost-bg)] p-6 transition duration-300 hover:border-accent/30 hover:bg-[var(--surface-elevated)] hover:shadow-lg hover:shadow-accent/5">
-                      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-transform duration-300 group-hover:scale-110">
-                        <Palette size={24} />
-                      </div>
-                      <div className="mb-2 text-base font-semibold text-heading">Customizable</div>
-                      <div className="text-sm leading-relaxed text-text-tertiary">Built with Tailwind CSS for rapid scaling and iteration.</div>
-                    </div>
-                    <div className="group rounded-2xl border border-border bg-[var(--btn-ghost-bg)] p-6 transition duration-300 hover:border-accent/30 hover:bg-[var(--surface-elevated)] hover:shadow-lg hover:shadow-accent/5">
-                      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-transform duration-300 group-hover:scale-110">
-                        <Smartphone size={24} />
-                      </div>
-                      <div className="mb-2 text-base font-semibold text-heading">Responsive</div>
-                      <div className="text-sm leading-relaxed text-text-tertiary">Pixel-perfect design on mobile, tablet, and desktop screens.</div>
-                    </div>
-                  </div>
+
+                <h1 className="text-4xl font-bold tracking-tight text-heading sm:text-5xl md:text-6xl lg:text-7xl">
+                  Launch Your{" "}
+                  <span className="gradient-text">Landing Page</span>
+                  <br className="hidden sm:block" /> in{" "}
+                  <span className="gradient-text">48 Hours</span>
+                </h1>
+
+                <p className="mt-6 max-w-2xl text-base leading-relaxed text-text-secondary sm:text-xl">
+                  Production-ready, mobile-responsive landing pages built with Next.js & Tailwind. Live Vercel URL + source code you own.
+                </p>
+
+                <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:justify-start">
+                  <a
+                    href="#packages"
+                    className="inline-flex w-full items-center justify-center rounded-full bg-heading px-8 py-4 text-base font-bold text-background transition-all duration-200 hover:scale-[1.02] hover:opacity-95 hover:shadow-xl active:scale-95 sm:w-auto"
+                  >
+                    Start Your Project
+                  </a>
+                  <a
+                    href="#work"
+                    className="inline-flex w-full items-center justify-center rounded-full border border-gray-700 bg-transparent px-8 py-4 text-base font-medium text-heading transition-all duration-200 hover:scale-[1.02] hover:border-gray-500 hover:bg-[var(--btn-ghost-hover)] active:scale-95 sm:w-auto"
+                  >
+                    See example work
+                  </a>
                 </div>
-              </div>
-            </FadeIn>
+                
+                <p className="mt-4 text-center sm:text-left text-sm font-medium text-accent">
+                  ⚡️ Limited slots this week
+                </p>
+
+                <div className="mt-12 flex flex-wrap items-center justify-center sm:justify-start gap-x-6 gap-y-3 text-sm text-text-tertiary">
+                  <span className="flex items-center gap-2"><Check size={16} className="text-accent" /> No templates</span>
+                  <span className="flex items-center gap-2"><Check size={16} className="text-accent" /> Source code included</span>
+                  <span className="flex items-center gap-2"><Check size={16} className="text-accent" /> 3 clear packages</span>
+                </div>
+              </FadeIn>
+
+              <FadeIn delay={0.2} className="relative mx-auto w-full max-w-2xl lg:max-w-none">
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-border shadow-2xl glass transition-transform duration-700 hover:scale-[1.02]">
+                  <Image 
+                    src="/hero-mockup.jpg" 
+                    alt="Landing Page Mockup"
+                    fill
+                    priority
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent pointer-events-none mix-blend-overlay"></div>
+                </div>
+              </FadeIn>
+            </div>
           </div>
         </section>
+
+        <FadeIn delay={0.3}>
+          <TrustBadges />
+        </FadeIn>
 
         {/* Stats */}
         <section className="border-y border-border bg-[var(--stats-bg)] px-4 py-10 sm:px-6">
@@ -246,51 +216,7 @@ export default function Home() {
 
             <StaggerContainer className="mt-12 grid gap-6 lg:grid-cols-3">
               {works.map((w) => (
-                <StaggerItem
-                  key={w.title}
-                  className="glass group overflow-hidden rounded-2xl transition hover:border-accent/30 hover:shadow-xl hover:shadow-accent/5"
-                >
-                  <div
-                    className={`relative aspect-[16/10] bg-gradient-to-br ${w.accent} p-5 overflow-hidden`}
-                  >
-                    <div className="absolute inset-4 flex flex-col overflow-hidden rounded-xl border border-border bg-surface/80 p-3 shadow-lg backdrop-blur-sm transition-transform duration-500 group-hover:scale-[1.03]">
-                      {/* Mini Navbar */}
-                      <div className="mb-2 flex items-center justify-between border-b border-border/50 pb-2">
-                        <div className="text-[10px] font-bold text-heading">{w.title}</div>
-                        <div className="flex gap-2">
-                          <span className="cursor-pointer text-[8px] text-text-tertiary transition-colors hover:text-heading">Features</span>
-                          <span className="cursor-pointer text-[8px] text-text-tertiary transition-colors hover:text-heading">Pricing</span>
-                        </div>
-                      </div>
-                      
-                      {/* Mini Hero */}
-                      <div className="flex flex-1 flex-col items-center justify-center text-center">
-                        <div className="mb-2 inline-block rounded-full bg-accent/10 px-2 py-0.5 text-[8px] font-medium text-accent">
-                          {w.type}
-                        </div>
-                        <div className="mb-1.5 text-[14px] font-bold leading-tight text-heading">
-                          Welcome to {w.title}
-                        </div>
-                        <div className="mb-3 max-w-[90%] line-clamp-2 text-[9px] leading-relaxed text-text-secondary">
-                          {w.blurb}
-                        </div>
-                        <div className="rounded-full bg-accent px-4 py-1 text-[9px] font-medium text-[var(--btn-accent-text)] shadow-sm">
-                          Explore Now
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <div className="text-xs font-medium uppercase tracking-wider text-accent/90">
-                      {w.type}
-                    </div>
-                    <h3 className="mt-1 text-xl font-semibold text-heading">{w.title}</h3>
-                    <p className="mt-2 text-sm text-text-tertiary">{w.blurb}</p>
-                    <p className="mt-4 flex items-center gap-1.5 font-mono text-xs text-text-quaternary">
-                      <Code size={12} /> {w.stack}
-                    </p>
-                  </div>
-                </StaggerItem>
+                <PortfolioCard key={w.title} item={w} />
               ))}
             </StaggerContainer>
           </div>

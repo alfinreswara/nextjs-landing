@@ -15,9 +15,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Your project name — Next.js Landing Pages Live in 48 Hours",
+  title: "Alfin Reswara — Next.js Landing Pages in 48 Hours",
   description:
-    "I build modern Next.js landing pages and deploy them live on Vercel. Mobile responsive, clean UI, source code included. Packages from $80.",
+    "Production-ready landing pages built with Next.js & Tailwind. Live Vercel URL + source code. Mobile responsive, SEO optimized.",
+  openGraph: {
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+  },
+  icons: {
+    icon: "/favicon.svg",
+  },
   keywords: [
     "Next.js landing page",
     "Vercel deploy",

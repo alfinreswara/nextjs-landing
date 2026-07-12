@@ -77,6 +77,8 @@ export const works = [
     stack: "Next.js · Tailwind · Vercel",
     blurb: "Clean product waitlist with hero, features, and email CTA.",
     accent: "from-indigo-400/15 to-blue-400/8",
+    link: "https://novatask.vercel.app",
+    image: "/portfolio/novatask-desktop.jpg"
   },
   {
     title: "PulseCoach",
@@ -84,6 +86,8 @@ export const works = [
     stack: "Next.js · Tailwind · Vercel",
     blurb: "Booking-focused landing for coaches and freelancers.",
     accent: "from-purple-400/15 to-violet-400/8",
+    link: "https://pulsecoach.vercel.app",
+    image: "/portfolio/pulsecoach-desktop.jpg"
   },
   {
     title: "Harbor Local",
@@ -91,6 +95,8 @@ export const works = [
     stack: "Next.js · Tailwind · Vercel",
     blurb: "Service business page with WhatsApp CTA and social proof.",
     accent: "from-slate-400/12 to-indigo-400/6",
+    link: "https://harbor-local.vercel.app",
+    image: "/portfolio/harbor-local-desktop.jpg"
   },
 ] as const;
 
